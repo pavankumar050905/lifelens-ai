@@ -1,0 +1,7 @@
+{
+  "name": "LifeLens AI — Lean Repair Assistant",
+  "description": "A multimodal repair assistant that diagnoses issues from images and voice, providing step-by-step guides, parts estimates, and accessibility features.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
