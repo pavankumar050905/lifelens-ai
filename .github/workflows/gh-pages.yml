@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -23,11 +24,30 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Debug env (show versions & files)
+        run: |
+          node -v
+          npm -v
+          pwd
+          ls -la
+
+      - name: Install dependencies (use lockfile if present)
+        run: |
+          if [ -f package-lock.json ]; then
+            echo "Found package-lock.json — running npm ci"
+            npm ci
+          else
+            echo "No lockfile — running npm install"
+            npm install
+          fi
 
       - name: Build
         run: npm run build
+
+      - name: Show dist contents
+        run: |
+          echo "Build finished, listing dist folder"
+          ls -la ./dist || true
 
       - name: Configure Pages
         uses: actions/configure-pages@v4
