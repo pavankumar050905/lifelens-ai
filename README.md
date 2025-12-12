@@ -58,6 +58,10 @@ This contains everything you need to run your app locally.
 ⚠️ View app in AI Studio (Requires login — judges can ignore):  
 https://ai.studio/apps/drive/1qPPe7v4EN0jRXLuHvoW7bdl_59aZgAJs
 
+## 🔗 Public Demo (Basic UI Preview)
+This is a non-functional preview of the LifeLens AI interface:
+https://pavankumar050905.github.io/lifelens-ai/
+
 ## Run Locally
 
 **Prerequisites:** Node.js
