@@ -1,0 +1,7 @@
+﻿{
+  "example_input": "A photo of a small scratch on a phone screen",
+  "predicted_label": "Minor scratch, repairable",
+  "advice": "Recommend surface polish or screen protector. Not necessary to replace screen.",
+  "confidence": 0.92,
+  "timestamp": "2025-12-12T00:00:00Z"
+}
